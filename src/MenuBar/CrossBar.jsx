@@ -14,13 +14,28 @@ export default function CrossBar() {
       </div>
       <div className="flex gap-14 items-center justify-center h-[70px]">
         <div>
-          <Link className="hover:text-yellow-400 duration-200 ease-linear" to="/">Home</Link>
+          <Link
+            className="hover:text-yellow-400 duration-200 ease-linear p-2"
+            to="/"
+          >
+            Home
+          </Link>
         </div>
         <div>
-          <Link className="hover:text-yellow-400 duration-200 ease-linear" to="/Document">Document</Link>
+          <Link
+            className="hover:text-yellow-400 duration-200 ease-linear p-2"
+            to="/Document"
+          >
+            Document
+          </Link>
         </div>
         <div>
-          <Link className="hover:text-yellow-400 duration-200 ease-linear" to="/SignIn">Sign In</Link>
+          <Link
+            className="hover:text-yellow-400 duration-200 ease-linear p-2"
+            to="/SignIn"
+          >
+            Sign In
+          </Link>
         </div>
       </div>
     </div>

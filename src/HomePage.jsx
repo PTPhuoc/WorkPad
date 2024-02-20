@@ -3,6 +3,7 @@ import CrossBar from "./MenuBar/CrossBar";
 import Document from "./Compoment/Document.jsx";
 import SignIn from "./Compoment/SignIn.jsx";
 import MainPage from "./Compoment/PageMain.jsx";
+import Footer from "./Compoment/Footer.jsx";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,9 @@ export default function HomePage() {
           <Route path="/SignIn" element={<SignIn/>}/>
         </Routes>
       </div>
+      <footer className="w-full">
+        <Footer/>
+      </footer>
     </div>
   )
 }
