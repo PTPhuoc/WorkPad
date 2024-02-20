@@ -4,6 +4,7 @@ import Document from "./Compoment/Document.jsx";
 import SignIn from "./Compoment/SignIn.jsx";
 import MainPage from "./Compoment/PageMain.jsx";
 import Footer from "./Compoment/Footer.jsx";
+import NoteEdit from "./Compoment/NoteEdit.jsx"
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
           <Route path="/" element={<MainPage/>}/>
           <Route path="/Document" element={<Document/>}/>
           <Route path="/SignIn" element={<SignIn/>}/>
+          <Route path="/EditNote" element={<NoteEdit/>}/>
         </Routes>
       </div>
       <footer className="w-full">
