@@ -1,9 +1,10 @@
-import './App.css';
+import Status from "./Context/Status";
+import HomePage from "./HomePage.jsx"
 
 function App() {
   return (
     <div className="App">
-      <p className='text-purple-950 '>cmm phuoc viec</p> 
+      <Status Compoment={<HomePage/>}></Status>
     </div>
   );
 }
