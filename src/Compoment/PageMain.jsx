@@ -31,34 +31,47 @@ export default function PageMain() {
       </div>
       <div className="w-full h-[4px] bg-zinc-800 mt-[30px] mb-[30px] "></div>
       <div>
-        <div className=" w-100 h-100  border-gray-100 p-5 rounded-lg shadow-md bg-slate-400 relative">
-          <p className="leading-6 mb-10">
-            Hổ Trợ đầy đủ công cụ của trình soạn thảo cơ bản. Tạo các ghi chú và
-            ý tưởng mới chỉ trong vài giây, không cần đăng nhập hoặc tạo tài
-            khoản nếu không sử dụng lâu dài.
-          </p>
-          <div className="but absolute bottom-20 right-20 w-50 h-50 bg-black rounded-full">
-            <div className="before absolute top-10 left-20 w-10 h-30 bg-white rounded-md"></div>
+        <div className="bg-zinc-500 ml-10 rounded-l-full pt-[10px] pb-[10px] flex items-center justify-end">
+          <div>
+            <img
+              src="./Icon/pen-solid.svg"
+              className="w-[50px] h-[50px] mr-[60px]"
+              alt=""
+            ></img>
+          </div>
+          <div className="bg-white p-5 rounded-l-full">
+            <p className="w-[1300px] text-center">
+              Hổ Trợ đầy đủ công cụ của trình soạn thảo cơ bản. Tạo các ghi chú
+              và ý tưởng mới chỉ trong vài giây, không cần đăng nhập hoặc tạo
+              tài khoản nếu không sử dụng lâu dài.
+            </p>
           </div>
         </div>
       </div>
       <br />
       <div>
-        <div className=" w-100 h-100  border-gray-100 p-5 rounded-lg shadow-md bg-slate-400 relative">
-          <p className="leading-6 mb-10">
-            Đây là một WorkPad mã nguồn mở được áp dụng giấy phép MIT và bạn có
-            thể truy cập nguồn của chúng tôi tại:
-          </p>
+        <div className="bg-zinc-500 rounded-r-full pt-[10px] pb-[10px] flex items-center justify-end flex-row-reverse mr-10">
           <div>
-            <a href="https://github.com/PTPhuoc/WorkPad.git">
-              https://github.com/PTPhuoc/WorkPad.git
-            </a>
+            <img
+              src="./Icon/github.svg"
+              className="w-[80px] h-[80px] ml-7"
+              alt=""
+            ></img>
           </div>
-          <div className="but absolute bottom-20 right-20 w-50 h-50 bg-black rounded-full">
-            <div className="before absolute top-10 left-20 w-10 h-30 bg-white rounded-md"></div>
+          <div className="bg-white p-5 rounded-r-full ">
+            <p className="w-[1300px] text-center">
+              Đây là một WorkPad mã nguồn mở được áp dụng giấy phép MIT và bạn
+              có thể truy cập nguồn của chúng tôi tại:{" "}
+              <a
+                href="https://github.com/PTPhuoc/WorkPad.git"
+              >
+                https://github.com/PTPhuoc/WorkPad.git
+              </a>
+            </p>
           </div>
         </div>
       </div>
+      <br />
     </div>
   );
 }
