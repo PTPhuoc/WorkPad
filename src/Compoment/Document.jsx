@@ -16,7 +16,7 @@ export default function Document() {
       </div>
       <div className="flex flex-col bg-yellow-400 w-[720px] rounded-r-full">
         <p className="  text-black rounded-3xl pt-3 pb-3 pl-5 pr-5 ">
-          Ghi Chú Mọi Lúc, Mọi Nơi{" "}
+          Ghi Chú Mọi Lúc, Mọi Nơi
         </p>
       </div>
       <div className="flex flex-col bg-zinc-400  rounded-lg p-[50px] m-10  ">
@@ -27,7 +27,7 @@ export default function Document() {
       </div>
       <div className="flex flex-col bg-yellow-400 w-[720px] rounded-r-full">
         <p className="  text-black rounded-3xl pt-3 pb-3 pl-5 pr-5 ">
-          Bảo Mật Thông Tin{" "}
+          Bảo Mật Thông Tin
         </p>
       </div>
       <div className="flex flex-col bg-zinc-400  rounded-lg p-[50px] m-10  ">
@@ -39,13 +39,13 @@ export default function Document() {
 
       <div className="flex flex-col bg-yellow-400 w-[720px] rounded-r-full">
         <p className="  text-black rounded-3xl pt-3 pb-3 pl-5 pr-5 ">
-          Đồng Bộ Hóa Dữ Liệu{" "}
+          Đồng Bộ Hóa Dữ Liệu
         </p>
       </div>
       <div className="flex flex-col bg-zinc-400  rounded-lg p-[50px] m-10  ">
         <p className="  text-black rounded-3xl pt-3 pb-3 pl-5 pr-[15px] text-center   ">
           Đồng bộ hóa dữ liệu của bạn trên nhiều thiết bị để bạn luôn có thể
-          truy cập và cập nhật thông tin mới nhất.{" "}
+          truy cập và cập nhật thông tin mới nhất.
         </p>
       </div>
     </div>
