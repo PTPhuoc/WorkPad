@@ -2,40 +2,53 @@ import React from 'react'
 
 export default function SignUp() {
   return (
-    import React from 'react'
-
-export default function SignUp() {
-  return (
     <div>
-      <div className="bg-cover bg-center h-screen flex items-center justify-center" style={{ backgroundImage: "url('/SigninBR.png')" }}>
-        <div class="w-[558px] h-[700px] gap-5 flex justify-center items-center flex-col bg-yellow-200 -mr-[1000px]">
-          <h1 class="text-4xl items-center font-bold mb-4  ">Đăng ký</h1>
+      <div className="flex ">
+        <div className="overflow-hidden h-[702px]">
+          <img src="./Image/SignInBR.png" className="w-[960px]" alt="" />
+        </div>
+        <div className="w-[558px] h-[702px] gap-5 flex justify-center items-center flex-col bg-[#efee9b] -mr-[1000px]">
+          <h1 className="text-[50px] items-center font-bold mb-4">Đăng ký</h1>
           <form action="#">
-            <div class="mb-4">
-              <label for="email" class="block mb-2 text-sm  font-medium text-gray-900 dark:text-gray-300">Email</label>
-              <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" placeholder="Nhập email của bạn" />
+            <div className="mb-4">
+              <input
+                type="email"
+                id="email"
+                className="shadow-sm outline-none w-[300px] pl-5 rounded-3xl p-2.5"
+                placeholder="Email"
+              />
             </div>
-            <div class="mb-4">
-              <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Mật khẩu</label>
-              <input type="password" id="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" placeholder="Nhập mật khẩu của bạn" />
+            <div className="mb-4">
+              <input
+                type="password"
+                id="password"
+                className="shadow-sm outline-none pl-5 rounded-3xl w-full p-2.5"
+                placeholder="Mật khẩu"
+              />
             </div>
-            <div class="mb-4">
-              <label for="confirm_password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Xác nhận lại mật khẩu</label>
-              <input type="password" id="confirm_password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" placeholder="Nhập lại mật khẩu của bạn" />
+            <div className="mb-4">
+              <input
+                type="password"
+                id="confirm_password"
+                className="shadow-sm bg-gray-50  outline-none  rounded-3xl w-full p-2.5"
+                placeholder="Nhập lại mật khẩu của bạn"
+              />
             </div>
-            <div class="flex items-center justify-between">
-              <button type="submit" class="flex flex-row-reverse bg-amber-400 rounded-full bg-primary-500 hover:bg-primary-700 text-white font-bold py-2 px-4 rounded focus:ring-primary-500 focus:border-primary-500">Xác nhận</button>
-
+            <div className="text-center flex justify-center">
+              <button type="submit" className=" bg-amber-400 rounded-full text-white font-bold py-2 px-4">
+                Xác nhận
+              </button>
             </div>
           </form>
-
-          <p class="text-sm text-center font-bold text-gray-500 dark:text-gray-400">Bạn có tài khoản? <a href="#" class="text-primary-500 hover:text-primary-700">Hãy đăng nhập</a></p>
+          <p className="text-center font-bold">
+            Chưa có tài khoản? <br></br>
+            <a href="#" className="text-primary-500 hover:text-primary-700">
+              Tạo tài khoản
+            </a>
+          </p>
         </div>
-
       </div>
     </div>
   )
 }
 
-  )
-}
