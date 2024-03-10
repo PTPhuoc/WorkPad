@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { StatusContext } from "../Context/Status";
 export default function PageMain() {
+  const [ , , , SetIsSideBar] = useContext(StatusContext)
+  useEffect(() => {
+    SetIsSideBar(true)
+  })
   return (
-    <div className="flex flex-col pt-[30px]">
+    <div className="flex flex-col pt-[100px]">
       <div className="flex flex-row-reverse justify-between flex-wrap gap-[70px]">
         <div className="w-[500px] h-[300px] gap-5 flex justify-center items-center flex-col bg-yellow-200 rounded-tl-3xl rounded-bl-3xl">
           <div>

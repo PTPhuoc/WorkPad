@@ -5,19 +5,26 @@ import SignIn from "./Compoment/SignIn.jsx";
 import MainPage from "./Compoment/PageMain.jsx";
 import Footer from "./Compoment/Footer.jsx";
 import NoteEdit from "./Compoment/NoteEdit.jsx"
+import Account from "./Compoment/Account.jsx";
+import { useContext } from "react";
+import { StatusContext } from "./Context/Status.jsx";
+import SignUp from "./Compoment/SignUp.jsx";
 
 export default function HomePage() {
+  const [ , , isSideBar] = useContext(StatusContext)
   return (
     <div>
-      <div className="fixed w-full">
+      <div className={isSideBar? "fixed w-full" : "fixed w-full hidden"}>
         <CrossBar/>
       </div>
-      <div className="pt-[70px]">
+      <div>
         <Routes>
           <Route path="/" element={<MainPage/>}/>
           <Route path="/Document" element={<Document/>}/>
           <Route path="/SignIn" element={<SignIn/>}/>
+          <Route path="/SignUp" element={<SignUp/>}/>
           <Route path="/EditNote" element={<NoteEdit/>}/>
+          <Route path="/Account" element={<Account/>}/>
         </Routes>
       </div>
       <footer className="w-full">

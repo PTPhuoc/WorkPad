@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { StatusContext } from "../Context/Status";
 
 export default function Document() {
+  const [ , , , SetIsSideBar] = useContext(StatusContext)
+  useEffect(() => {
+    SetIsSideBar(true)
+  })
   return (
-    <div className=" flex flex-col pt-[30px] ">
+    <div className=" flex flex-col pt-[100px]">
       <div className="flex flex-col bg-yellow-400 w-[720px] rounded-r-full">
         <p className="  text-black rounded-3xl pt-3 pb-3 pl-5 pr-5 ">
           Tạo và Tổ Chức Ghi Chú

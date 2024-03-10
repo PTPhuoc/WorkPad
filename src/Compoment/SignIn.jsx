@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { StatusContext } from "../Context/Status";
+import { Link } from "react-router-dom";
 
 export default function SignIn() {
+  const [ , , , SetIsSideBar] = useContext(StatusContext)
+  useEffect(() => {
+    SetIsSideBar(false)
+  })
   return (
     <div>
       <div className="flex ">
@@ -40,9 +46,9 @@ export default function SignIn() {
           </form>
           <p className="text-center font-bold">
             Chưa có tài khoản? <br></br>
-            <a href="#" className="text-primary-500 hover:text-primary-700">
+            <Link to="/SignUp" className="text-primary-500 hover:text-primary-700">
               Tạo tài khoản
-            </a>
+            </Link>
           </p>
         </div>
       </div>
