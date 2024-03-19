@@ -4,8 +4,8 @@ import { StatusContext } from "../Context/Status";
 export default function PageMain() {
   const [ , , , SetIsSideBar] = useContext(StatusContext)
   useEffect(() => {
-    SetIsSideBar(true)
-  },[SetIsSideBar])
+    SetIsSideBar({Sidebar: true, Footer: true});
+  },[SetIsSideBar]);
   return (
     <div className="flex flex-col pt-[100px]">
       <div className="flex flex-row-reverse justify-between flex-wrap gap-[70px]">
@@ -15,7 +15,7 @@ export default function PageMain() {
           </div>
           <div>
             <Link
-              to="/EditNote"
+              to="/NoteEdit"
               className="bg-zinc-800 text-white rounded-3xl pt-3 pb-3 pl-5 pr-5 hover:bg-white hover:text-yellow-600 duration-200 ease-linear"
             >
               Tại Đây

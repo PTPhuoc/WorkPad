@@ -3,9 +3,9 @@ import { StatusContext } from "../Context/Status";
 import { useNavigate } from "react-router-dom";
 
 export default function Account() {
-  const [, , , SetIsSideBar, Account, setAccount] = useContext(StatusContext);
+  const [, , ,SetIsSideBar, Account, setAccount] = useContext(StatusContext);
   useEffect(() => {
-    SetIsSideBar(true);
+    SetIsSideBar({Sidebar: true, Footer: true});
   },[SetIsSideBar]);
 
   const navigate = useNavigate();
