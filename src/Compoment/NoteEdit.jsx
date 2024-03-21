@@ -104,7 +104,7 @@ export default function NoteEdit() {
   };
 
   const AddNote = () => {
-    if (Account.Email === "") {
+    if (Account.Email === "" || Account.Email === undefined) {
       const NewNote = {
         _id: (Math.floor(Math.random() * 900000) + 100000).toString(),
         DateCreate: GetDay(),
@@ -171,7 +171,7 @@ export default function NoteEdit() {
   };
 
   const DeleteNote = () => {
-    if (!Account) {
+    if (!Account.Email) {
       const ExistsNote = StorageNote.filter((i) => i._id !== DataNote._id);
       if (ExistsNote.length === 0) {
         window.localStorage.setItem("Notes", "");
@@ -181,29 +181,27 @@ export default function NoteEdit() {
       }
       if (SearchNote.length >= 1) {
         AutoDeleteSearchNote();
-      } else {
-        if (StorageNote.length > 1) {
-          if (StorageNote[0]._id === DataNote._id) {
-            setDataNote(StorageNote[1]);
-            setContentNote(StorageNote[1].Content);
-          } else {
-            setDataNote(StorageNote[0]);
-            setContentNote(StorageNote[0].Content);
-          }
+      }
+      if (StorageNote.length > 1) {
+        if (StorageNote[0]._id === DataNote._id) {
+          setDataNote(StorageNote[1]);
+          setContentNote(StorageNote[1].Content);
         } else {
-          setDataNote({
-            _id: "",
-            Title: "",
-            Prioritize: 0,
-            DateCreate: "",
-            EmailCreate: "",
-            Content: "",
-          });
-          window.location.reload();
+          setDataNote(StorageNote[0]);
+          setContentNote(StorageNote[0].Content);
         }
+      } else {
+        setDataNote({
+          _id: "",
+          Title: "",
+          Prioritize: 0,
+          DateCreate: "",
+          EmailCreate: "",
+          Content: "",
+        });
+        window.location.reload();
       }
     } else {
-
       axios
         .post("http://localhost:9000/Note/DeleteNote", { _id: DataNote._id })
         .then((rs) => {
@@ -245,7 +243,7 @@ export default function NoteEdit() {
   };
 
   const ChangePrioritize = () => {
-    if (!Account) {
+    if (!Account.Email) {
       if (DataNote.Prioritize === 0) {
         setDataNote({ ...DataNote, Prioritize: 1 });
         setStorageNote((prev) =>
@@ -371,8 +369,8 @@ export default function NoteEdit() {
   }, [isWait]);
 
   useEffect(() => {
-    if (Account.Email !== "") {
-      if (DataNote._id !== "") {
+    if (Account.Email) {
+      if (DataNote._id) {
         setTimeout(() => {
           axios
             .post("http://localhost:9000/Note/ChangeTitle", {
@@ -406,7 +404,7 @@ export default function NoteEdit() {
   }, [Search]);
 
   useEffect(() => {
-    if (Account.Email === "") {
+    if (Account.Email === "" || Account.Email === undefined) {
       if (StorageNote.length !== 0) {
         window.localStorage.setItem("Notes", JSON.stringify(StorageNote));
       }
@@ -535,7 +533,7 @@ export default function NoteEdit() {
                     <button
                       onClick={AddNote}
                       className={
-                        Account.Email === "" && StorageNote.length === 3
+                        !Account.Email && StorageNote.length === 3
                           ? "w-full bg-white mx-3 rounded-lg flex items-center justify-center mt-2 opacity-50 cursor-none pointer-events-none"
                           : "w-full bg-white mx-3 rounded-lg flex items-center justify-center mt-2"
                       }
