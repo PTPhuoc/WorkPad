@@ -10,3 +10,51 @@ body {
   font-style: normal;
   font-size: 25px;
 }
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.loader {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: block;
+  margin:15px auto;
+  position: relative;
+  background: #FFF;
+  box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+  box-sizing: border-box;
+  animation: shadowPulse 2s linear infinite;
+}
+
+@keyframes shadowPulse {
+  33% {
+    background: #FFF;
+    box-shadow: -24px 0 #fbe600, 24px 0 #FFF;
+  }
+  66% {
+    background: #fbe600;
+    box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+  }
+  100% {
+    background: #FFF;
+    box-shadow: -24px 0 #FFF, 24px 0 #fbe600;
+  }
+}
