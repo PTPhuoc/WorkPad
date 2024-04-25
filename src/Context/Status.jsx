@@ -30,6 +30,7 @@ export default function Status({ Compoment }) {
               Name: "",
               Email: "",
               Password: "",
+              Type: ""
             });
           }
         })

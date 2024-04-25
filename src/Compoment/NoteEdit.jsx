@@ -76,7 +76,7 @@ export default function NoteEdit() {
       setContentNote("");
       setStorageNote([...StorageNote, NewNote]);
     } else {
-      setDataNote(NewNote);
+      setDataNote({});
       setContentNote("");
       axios
         .post("http://localhost:9000/Note/SaveNote", {

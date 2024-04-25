@@ -103,6 +103,7 @@ export default function SignIn() {
                 Email: inforUser.email,
                 Name: inforUser.name,
                 Password: inforUser.id,
+                Type: "Google"
               })
               .then((rs2) => {
                 window.localStorage.setItem("Email", inforUser.email);
