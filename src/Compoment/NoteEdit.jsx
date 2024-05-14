@@ -349,10 +349,10 @@ export default function NoteEdit() {
   }, [DataNote.Prioritize]);
 
   const SaveChangeTitle = useMemo(() => {
-    return debounce((Name) => {
+    return debounce((Name, _id) => {
       axios
         .post("http://localhost:9000/Note/ChangeTitle", {
-          _id: DataNote._id,
+          _id: _id,
           Title: Name,
         })
         .then((rs) => {
@@ -394,7 +394,7 @@ export default function NoteEdit() {
     } else {
       if (DataNote._id) {
         // eslint-disable-next-line react-hooks/exhaustive-deps
-        SaveChangeTitle(DataNote.Title);
+        SaveChangeTitle(DataNote.Title, DataNote._id);
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
